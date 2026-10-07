@@ -1,0 +1,18 @@
+real-trust-dialog.txt
+  Verbatim rows captured from the real cmux/Claude runtime during a live acceptance run
+  (case R0-modal, evidence tail)
+  Expected classification: modal (dialog text, no NBSP input line).
+
+real-dialog-scrollback-then-idle.txt
+  Composite of two REAL captures, not an invented screen: the dialog rows above kept as
+  scrollback, followed by the real prompt/footer rows recorded verbatim from a
+  read-screen of a live Claude Code session (last 12 rows).
+  This is the case `--lines N` produces after the operator answers the
+  dialog: the dialog is still in the window but the input box is back.
+  Expected classification: prompt_idle.
+
+real-idle-placeholder-v2.1.292.txt
+  Screen rows recorded verbatim from a read-screen of a fresh live Claude Code v2.1.292 session
+  (scratch path in the banner replaced with /tmp/scratch). Idle prompt shows the dimmed
+  'Try "..."' suggestion; footer tokens are NBSP-separated.
+  Expected classification: prompt_idle, ctx_used_pct 0.0, model Sonnet 5.5.
